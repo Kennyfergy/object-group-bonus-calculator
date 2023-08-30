@@ -64,8 +64,7 @@ console.log("array of employee data: ", employees);
   // 4 gets 6%
   // 5 gets a 10%
   // employee number 4 digits long, additional 5%
-  //if income greater than 65,000, bonus is adjusted down 1%
-  // no bonus above 13% or below 0
+
 
   // return new object with bonus results
   return "hello";
@@ -89,11 +88,11 @@ function bonusCalc(employee) {
     if (employee.employeeNumber.length === 4) {
       obj.bonusPercentage += 0.05;
     }
-    console.log("4%");
+    console.log("Eployees Getting 4%");
     console.log(obj);
   } //end of if for 4%
   if (employee.reviewRating === 4) {
-    console.log("6%");
+    console.log("Employees getting 6%");
     obj.bonusPercentage = 0.06;
     if (employee.employeeNumber.length === 4) {
       obj.bonusPercentage += 0.05;
@@ -101,7 +100,7 @@ function bonusCalc(employee) {
     console.log(obj);
   } //end of 6%
   if (employee.reviewRating === 5) {
-    console.log("10%");
+    console.log("Employees getting 10%");
     obj.bonusPercentage = 0.1;
     if (employee.employeeNumber.length === 4) {
       obj.bonusPercentage += 0.05;
@@ -109,7 +108,7 @@ function bonusCalc(employee) {
     console.log(obj);
   } //end of 10%
   if (employee.reviewRating <= 2) {
-    console.log("0%");
+    console.log("Employees getting 0%");
     if (employee.employeeNumber.length === 4) {
       obj.bonusPercentage += 0.05;
     }
@@ -126,3 +125,9 @@ function bonusCalc(employee) {
   return obj;
 }
 //end bonusCalc
+
+let overSixtyFive = 0;
+let maxBonus = 0.13;
+
+//if income greater than 65,000, bonus is adjusted down 1%
+// no bonus above 13% or below 0
